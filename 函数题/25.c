@@ -24,7 +24,9 @@ void ReadString(char s[]) {
     // %*c 表示读取并丢弃最后的那个换行符，防止残留在缓冲区影响下次输入
     scanf("%[^\n]%*c", s);
 }
-//数组不可以=复制，用strcpy or strdup赋值,我在个代码只能删除一次，如果字符串有2个a,就删除了其中一个
+//数组不可以=复制(char a[10]="xj" ,b[10]，b=a)用strcpy or strdup赋值,我在个代码只能删除一次，如果字符串有2个a,就删除了其中一个,指针的okchar *a = "hello";char *b;b = a; // 完全正确
+
+// 重要：数组赋值和指针赋值区别。
 void delchar( char *str, char c )
 {
 	int len=strlen(str);
