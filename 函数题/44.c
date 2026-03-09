@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+//
 #define MAXS 10
 
 char *str_cat( char *s, char *t );
